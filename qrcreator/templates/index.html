@@ -1,22 +1,66 @@
 <!DOCTYPE html>
-<html>
-    {% load static %}
-    <head>
-        <meta charset="UTF-8">
-        <title>QrCreator</title>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="theme-color" content="#101818">
-        
-        <script src="{% static 'js/index.js' %}"></script>
-    </head>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>String To Qr</title>
 
-    <body>
-        <input id="qr_data" type="text" placeholder="enter text data"/>
-        <input id="gen_btn" type="button" value="generate"/>
-        <img width="200px" height="200px" id="qr_img"/>
-        
-    </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="theme-color" content="#101818">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/iconmonstr-iconic-font.min.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css" media="all" />
+
+</head>
+<body>
+    <header>
+        <nav class="_navbar">
+            <a href="/" class="_navbar_brand">
+                <img src="{% static 'img/logo.svg' %}" width="139" height="25" />
+                <button class="_navlist_toggler">
+                    ...
+                </button>
+            </a>
+
+            <ul class="_nav_links">
+                <li><a class="_nav_link" href="https://github.com/rubbiekelvin">Github</a></li>
+                <li><a class="_nav_link" href="https://twitter.com/KelvinRubbie">Twitter</a></li>
+                <li><a class="_nav_link" href="https://www.linkedin.com/in/rubbie-kelvin-831400176">LinkedIn</a></li>
+            </ul>
+
+            <a href="https://github.com/rubbiekelvin/qrcreator" class="_nav_call_to_action">
+                Source
+            </a>
+
+        </nav>
+
+        <div class="_hero">
+            <div class="_side-left">
+                <h3>String to QR</h3>
+                <p>
+                    Enter a text below to generate qr code.
+                </p>
+
+                <input id="qr_data" type="text" placeholder="enter text data" />
+                <button id="gen_btn" type="button" class="btn btn-success">generate</button>
+
+            </div>
+            <div class="_side-right">
+                <img id="qr_img" />
+            </div>
+        </div>
+    </header>
+    
+    <footer>
+        <p class="attribution">made with ❤️ by rubbie</p>
+    </footer>
+
+    <script src="{% static 'js/poppins.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
 </html>
