@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <meta charset="UTF-8">
+        <title>QrCreator</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="theme-color" content="#101818">
+        
+        <script src="{% static 'js/index.js' %}"></script>
+    </head>
+
+    <body>
+        <input id="qr_data" type="text" placeholder="enter text data"/>
+        <input id="gen_btn" type="button" value="generate"/>
+        <img width="200px" height="200px" id="qr_img"/>
+        
+    </body>
+</html>
