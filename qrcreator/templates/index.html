@@ -20,8 +20,13 @@
         <nav class="_navbar">
             <a href="/" class="_navbar_brand">
                 <img src="{% static 'img/logo.svg' %}" width="139" height="25" />
-                <button class="_navlist_toggler">
-                    ...
+                
+                <button class="_navlist_toggler navbar-toggler" type="button">
+                    <svg height="25px" width="25px" xmlns="http://www.w3.org/2000/svg">
+                        <line class="stroke-current" x1="5" x2="20" y1="6" y2="6" stroke-width="1" stroke-linecap="square" />
+                        <line class="stroke-current" x1="5" x2="20" y1="12" y2="12" stroke-width="1" stroke-linecap="square" />
+                        <line class="stroke-current" x1="5" x2="20" y1="18" y2="18" stroke-width="1" stroke-linecap="square" />
+                    </svg>
                 </button>
             </a>
 
@@ -31,7 +36,7 @@
                 <li><a class="_nav_link" href="https://www.linkedin.com/in/rubbie-kelvin-831400176">LinkedIn</a></li>
             </ul>
 
-            <a href="https://github.com/rubbiekelvin/qrcreator" class="_nav_call_to_action">
+            <a href="https://github.com/rubbiekelvin/qrcreator" class="_nav_call_to_action bg-success">
                 Source
             </a>
 
@@ -44,7 +49,7 @@
                     Enter a text below to generate qr code.
                 </p>
 
-                <input id="qr_data" type="text" placeholder="enter text data" />
+                <input id="qr_data" type="text" class="form-control" placeholder="enter text data"/>
                 <button id="gen_btn" type="button" class="btn btn-success">generate</button>
 
             </div>

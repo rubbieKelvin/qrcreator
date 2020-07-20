@@ -50,6 +50,16 @@ body{
 
 ._navlist_toggler{
     display: none;
+    outline: none;
+    color: #000;
+}
+
+.stroke-current{
+    stroke: currentColor;
+}
+
+._navlist_toggler:focus{
+    outline: 0;
 }
 
 ._nav_call_to_action{
@@ -64,8 +74,11 @@ body{
 }
 
 ._nav_call_to_action:hover{
-    background-color: hsl(120, 55%, 45%) !important;
     color: white !important;
+}
+
+._nav_call_to_action:focus{
+    outline: none;
 }
 
 ._hero{
@@ -97,13 +110,18 @@ body{
     align-items: center;
 }
 
-._side-left > img{
+#qr_img{
     padding: 1em;
     border-radius: 5px;
     background-color: #fff;
     width: 20em;
     height: 20em;
-    border: 0px solid !important;
+    border: 0px solid transparent !important;
+    outline: none;
+}
+
+._side-right{
+    justify-content: center;
 }
 
 .attribution{
@@ -149,7 +167,7 @@ body{
     }
     
         
-    ._side-left > img{
+    #qr_img{
         padding: 1em;
         border-radius: 5px;
         background-color: #fff;
@@ -186,13 +204,18 @@ body{
         margin-bottom: 3em;
     }
     
+    ._side-right{
+        width: 100%;
+    }
+    
     .attribution{
         position: initial;
         margin-top: 2em;
         border-radius: 0px;
         box-shadow: 0px 0px 0px #000;
         background-color: transparent;
-        margin-left: 1em;
+        width: 100%;
+        text-align: center;
     }
     
     ._side-left > h3{
@@ -203,15 +226,16 @@ body{
     ._side-left > p{
         font-size: 1.5em;
     }
-    
         
-    ._side-left > img{
+    #qr_img{
         padding: 1em;
-        border-radius: 5px;
+        border-radius: 8px;
         background-color: #fff;
         width: 80%;
         height: 80%;
         border: 0px solid !important;
+        justify-self: center;
+        align-self: center;
     }
 
 }
@@ -244,5 +268,10 @@ body{
     ._navlist_toggler{
         display: initial;
         float: right;
+    }
+    
+    #gen_btn{
+        width: 100%;
+        margin-top: 1em;
     }
 }
